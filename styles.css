@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #131316;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: grid;
+    position: fixed;
+    place-items: center;
+    align-content: center;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #141414;
+    z-index: 1;
+}
+
+section, div {
+    margin: 15px;
+}
+
+article {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 100vh;
+}
+
+article h2 {
+    font-size: 4em;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+}
+
+article p {
+    font-size: 1.4em;
+    letter-spacing: 0.25em;
+}
+
+article.facts {
+    display: grid;
+    place-items: center;
+    align-content: flex-end;
+
+    height: 330vh;
+
+    background-image: url(./assets/images/swallow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top 100px center;
+}
+
+article li {
+    font-size: 1.4em;
+    letter-spacing: 0.25em;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.articles--hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.articles--show {
+    opacity: 1;
+}
+
+ul li {
+    color: #5698ee;
+    background: linear-gradient(#0c0c0c, #161830);
+}
+
+li:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+li:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+li:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+li:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.action-call {
+    display: grid;
+    place-items: start;
+    align-content: center;
+
+    width: 50%;
+
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.action-call a {
+    border: 4px #353030 solid;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #2462b3;
+}
+
+a {
+    text-decoration: none;
+    color: #d8a6a6;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    font-family: Poppins;
+}
+
+a:hover {
+    color: #438ea5;
+}
+
+.testimonial {
+    display: grid;
+    place-items: end;
+    margin: 20px 20px 100px 20px;
+}
+
+.testimonial h2 {
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    line-height: 1;
+}
+
+.testimonial p:nth-child(2) {
+    color: #757f9a;
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.events {
+    display: grid;
+    place-items: center;
+}
+
+.events h2 {
+    color: #dfdb19;
+}
+
+.events a {
+    color: #dfdb19;
+}
+
+.events a:hover {
+    color: #438ea5;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+    width: 100%;
+    height: 50px;
+
+    margin: 150px 0 0px 0;
+
+    background-color: #3aa19c;
+    background-image: url(./assets/images/dolphin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 300px center;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding-right: 100px;
+        background-position: left center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    footer {
+        padding: 10px;
+        padding-right: 100px;
+        background-position: center;
+    }
+
+    article {
+        margin-bottom: 100px;
+    }
+
+    article.facts {
+        background-position: top 200px center;
+        height: 200vh;
+    }
+}
